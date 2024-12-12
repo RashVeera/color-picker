@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Color Picker",
+  "description": "Allows you to know the color of an element in a webpage",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
